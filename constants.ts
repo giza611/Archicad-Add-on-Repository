@@ -327,13 +327,13 @@ export const ADDONS: AddOn[] = [
     tags: ["Modeling"]
   },
   {
-    name: "TAPIR",
-    company: "ArchicadPlus",
-    description: "Modeling tool.",
-    price: "Check Site",
-    link: "https://archicadplus.com/",
-    thumbnail: "https://placehold.co/400x250/e67e22/FFF?text=TAPIR",
-    tags: ["Modeling"]
+    name: "tAPIr",
+    company: "Archicad API Community",
+    description: "Open-source Python and Grasshopper plugin for Archicad automation. Simplifies access to Archicad APIs with JSON interface, Python library, and visual node-based Grasshopper workflows.",
+    price: "Free",
+    link: "https://www.archicad-api.com/",
+    thumbnail: "https://placehold.co/400x250/e67e22/FFF?text=tAPIr",
+    tags: ["Productivity", "Import/Export", "Global"]
   },
   {
     name: "BIMTECH",
