@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import Header from './components/Header';
 import AddonCard from './components/AddonCard';
 import AddonListItem from './components/AddonListItem';
@@ -10,6 +10,22 @@ const App: React.FC = () => {
   const [viewMode, setViewMode] = useState<ViewMode>('grid');
   const [activeTags, setActiveTags] = useState<string[]>([]);
   const [sortOrder, setSortOrder] = useState<SortOrder>('asc');
+  const [darkMode, setDarkMode] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('darkMode');
+      return saved ? JSON.parse(saved) : false;
+    }
+    return false;
+  });
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    localStorage.setItem('darkMode', JSON.stringify(darkMode));
+  }, [darkMode]);
 
   // Extract all unique tags
   const availableTags = useMemo(() => {
@@ -66,8 +82,8 @@ const App: React.FC = () => {
   }, [searchTerm, activeTags, sortOrder]);
 
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50">
-      <Header 
+    <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+      <Header
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
         viewMode={viewMode}
@@ -78,13 +94,15 @@ const App: React.FC = () => {
         toggleTag={toggleTag}
         sortOrder={sortOrder}
         setSortOrder={setSortOrder}
+        darkMode={darkMode}
+        setDarkMode={setDarkMode}
       />
 
       {/* Active Tags Display (below header) */}
       {activeTags.length > 0 && (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-4">
           <div className="flex flex-wrap gap-2 items-center">
-            <span className="text-xs font-semibold text-gray-500 uppercase mr-1">Active Filters:</span>
+            <span className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase mr-1">Active Filters:</span>
             {activeTags.map(tag => (
               <span key={tag} className="bg-primary text-white text-xs px-2 py-1 rounded-full flex items-center gap-1">
                 {tag}
@@ -93,9 +111,9 @@ const App: React.FC = () => {
                 </button>
               </span>
             ))}
-            <button 
+            <button
               onClick={() => setActiveTags([])}
-              className="text-xs text-gray-500 underline hover:text-gray-800 ml-2"
+              className="text-xs text-gray-500 dark:text-gray-400 underline hover:text-gray-800 dark:hover:text-gray-200 ml-2"
             >
               Clear all
             </button>
@@ -107,12 +125,12 @@ const App: React.FC = () => {
         
         {filteredAndSortedAddons.length === 0 ? (
           <div className="text-center py-20">
-            <div className="bg-gray-100 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="bg-gray-100 dark:bg-gray-800 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6">
               <i className="fas fa-search text-gray-400 text-3xl"></i>
             </div>
-            <h3 className="text-lg font-medium text-gray-900">No add-ons found</h3>
-            <p className="mt-1 text-gray-500">Try adjusting your search terms or filters.</p>
-            <button 
+            <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100">No add-ons found</h3>
+            <p className="mt-1 text-gray-500 dark:text-gray-400">Try adjusting your search terms or filters.</p>
+            <button
               onClick={() => { setSearchTerm(''); setActiveTags([]); }}
               className="mt-6 text-primary font-medium hover:underline"
             >
@@ -123,7 +141,7 @@ const App: React.FC = () => {
           <>
             {/* List Header (Only visible in list mode and large screens) */}
             {viewMode === 'list' && (
-              <div className="hidden sm:grid grid-cols-12 gap-4 px-4 py-2 mb-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">
+              <div className="hidden sm:grid grid-cols-12 gap-4 px-4 py-2 mb-2 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
                 <div className="col-span-3 pl-14">Name</div>
                 <div className="col-span-2">Company</div>
                 <div className="col-span-4">Description</div>
@@ -151,20 +169,19 @@ const App: React.FC = () => {
         )}
       </main>
 
-      <footer className="bg-white border-t border-gray-200 mt-auto">
+      <footer className="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 mt-auto transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-gray-500">
-            © {new Date().getFullYear()} Archicad Add-on Repository. All rights reserved.
-          </p>
+          <div className="text-center md:text-left">
+            <p className="text-sm text-gray-500 dark:text-gray-400">
+              © {new Date().getFullYear()} Archicad Add-on Repository. All rights reserved.
+            </p>
+            <p className="text-xs text-gray-400 dark:text-gray-500 mt-1">
+              by Gëzim Radoniqi
+            </p>
+          </div>
           <div className="flex gap-4">
-             <a href="#" className="text-gray-400 hover:text-gray-600 transition-colors">
+             <a href="https://github.com/giza611/Archicad-Add-on-Repository" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
                <i className="fab fa-github text-xl"></i>
-             </a>
-             <a href="#" className="text-gray-400 hover:text-gray-600 transition-colors">
-               <i className="fab fa-twitter text-xl"></i>
-             </a>
-             <a href="#" className="text-gray-400 hover:text-gray-600 transition-colors">
-               <i className="fab fa-linkedin text-xl"></i>
              </a>
           </div>
         </div>
