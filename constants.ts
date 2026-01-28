@@ -1,6 +1,79 @@
 import { AddOn } from './types';
 
 export const ADDONS: AddOn[] = [
+  // --- PAZ ACADEMY ADD-ONS (Switzerland) ---
+  {
+    name: "PAZ Fassadengenerator",
+    company: "PAZ Academy",
+    description: "Automates 3D facade creation from 2D plans, eliminating repetitive manual work and generating facades automatically.",
+    price: "Paid",
+    link: "https://pazacademy.ch/paz-archicad-addons/",
+    thumbnail: "https://placehold.co/400x250/2ecc71/FFF?text=PAZ+Fassaden",
+    tags: ["Modeling", "Productivity", "Switzerland"]
+  },
+  {
+    name: "PAZ Kostenkalkulator",
+    company: "PAZ Academy",
+    description: "Implements SIA 416 area-based cost calculation standards, integrating cost awareness directly into the modeling process.",
+    price: "Paid",
+    link: "https://pazacademy.ch/paz-archicad-addons/",
+    thumbnail: "https://placehold.co/400x250/3498db/FFF?text=PAZ+Kosten",
+    tags: ["Analysis", "Productivity", "Switzerland"]
+  },
+  {
+    name: "PAZ Raumstempelfix",
+    company: "PAZ Academy",
+    description: "Automates room label positioning, aligning hundreds of room stamp positions automatically with a single click.",
+    price: "Paid",
+    link: "https://pazacademy.ch/paz-archicad-addons/",
+    thumbnail: "https://placehold.co/400x250/9b59b6/FFF?text=PAZ+Raumstempel",
+    tags: ["Productivity", "Documentation", "Switzerland"]
+  },
+  {
+    name: "PAZ Volumenstudie",
+    company: "PAZ Academy",
+    description: "Generates massing studies automatically based on site area, building height, and density parameters.",
+    price: "Paid",
+    link: "https://pazacademy.ch/paz-archicad-addons/",
+    thumbnail: "https://placehold.co/400x250/e74c3c/FFF?text=PAZ+Volumen",
+    tags: ["Modeling", "Analysis", "Switzerland"]
+  },
+  {
+    name: "PAZ WandfinishPro",
+    company: "PAZ Academy",
+    description: "Material finishes planning tool that produces materialization plans efficiently in both 2D and 3D.",
+    price: "Paid",
+    link: "https://pazacademy.ch/paz-archicad-addons/",
+    thumbnail: "https://placehold.co/400x250/f39c12/FFF?text=PAZ+Wandfinish",
+    tags: ["Modeling", "Documentation", "Switzerland"]
+  },
+  {
+    name: "PAZ Gebäudelänge",
+    company: "PAZ Academy",
+    description: "Building geometry compliance checker that verifies facade length compliance with legal requirements.",
+    price: "Paid",
+    link: "https://pazacademy.ch/paz-archicad-addons/",
+    thumbnail: "https://placehold.co/400x250/1abc9c/FFF?text=PAZ+Gebäude",
+    tags: ["Analysis", "Switzerland"]
+  },
+  {
+    name: "PAZ Terrain Cleaner",
+    company: "PAZ Academy",
+    description: "Point reduction utility for terrain models that reduces polyline point counts to clean up contour lines.",
+    price: "Paid",
+    link: "https://pazacademy.ch/paz-archicad-addons/",
+    thumbnail: "https://placehold.co/400x250/34495e/FFF?text=PAZ+Terrain",
+    tags: ["Modeling", "Productivity", "Switzerland"]
+  },
+  {
+    name: "PAZGPT",
+    company: "PAZ Academy",
+    description: "AI-powered interaction tool with chat and voice interface, enabling natural language communication with Archicad models.",
+    price: "Paid",
+    link: "https://pazacademy.ch/paz-archicad-addons/",
+    thumbnail: "https://placehold.co/400x250/8e44ad/FFF?text=PAZGPT",
+    tags: ["Productivity", "Switzerland"]
+  },
   // --- MODELING & DESIGN ADD-ONS ---
   {
     name: "Place Gutter",
