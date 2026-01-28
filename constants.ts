@@ -2031,5 +2031,43 @@ export const ADDONS: AddOn[] = [
     link: "https://www.graphisoft.com/downloads/goodies",
     thumbnail: "https://placehold.co/400x250/3498db/FFF?text=Goodies+CEE",
     tags: ["Productivity", "Slovakia", "Romania", "Bulgaria"]
+  },
+  // --- RUSSIA ADD-ONS ---
+  {
+    name: "Goodies Suite RUS",
+    company: "Graphisoft Russia",
+    description: "Free localized add-ons in Russian; suite installer includes 3D Studio In, Interior Wizard, Mesh to Roof Tool, Accessories, Duplicate Checker. Essential for Russian users.",
+    price: "Free",
+    link: "https://www.graphisoft.com/ru/downloads/goodies-2",
+    thumbnail: "https://placehold.co/400x250/0039a6/FFF?text=Goodies+RUS",
+    tags: ["Productivity", "Russia"]
+  },
+  {
+    name: "LabPP Custom Add-ons",
+    company: "LabPP.ru",
+    description: "Bespoke add-on development service; Russian firms can order tailored plugins for specific workflows (automation, integration, custom calculations).",
+    price: "Paid (Custom)",
+    link: "https://www.labpp.ru/31-labpp-addons-na-zakazru",
+    thumbnail: "https://placehold.co/400x250/e74c3c/FFF?text=LabPP+Custom",
+    tags: ["Developer", "Russia"]
+  },
+  // --- UKRAINE ADD-ONS ---
+  {
+    name: "Goodies Suite UKR",
+    company: "Graphisoft (Ukrainian edition)",
+    description: "Free localized add-ons suite in Ukrainian; includes 3D Studio In, Interior Wizard, Mesh to Roof Tool, Accessories, Duplicate Checker. Essential for Ukrainian users.",
+    price: "Free",
+    link: "https://www.graphisoft.com/downloads/goodies/ac28-ukr",
+    thumbnail: "https://placehold.co/400x250/0057b7/FFF?text=Goodies+UKR",
+    tags: ["Productivity", "Ukraine"]
+  },
+  {
+    name: "Library Part Maker UKR",
+    company: "Graphisoft",
+    description: "Add-on for creating custom GDL objects easily; Ukrainian version simplifies parametric object creation without deep scripting.",
+    price: "Free",
+    link: "https://www.graphisoft.com/downloads/addons/lpm/library-part-maker-ukr-ac27",
+    thumbnail: "https://placehold.co/400x250/ffd700/000?text=LPM+UKR",
+    tags: ["Modeling", "Ukraine"]
   }
 ];
