@@ -1,6 +1,34 @@
 import { AddOn } from './types';
 
 export const ADDONS: AddOn[] = [
+  // --- ONIZU ADD-ONS ---
+  {
+    name: "ONIZU Quantity Take-off Tool",
+    company: "ONIZU",
+    description: "Custom quantity take-off tool providing a comprehensive interface to fetch quantities from your model based on a range of criteria, with cloud integration and XLS export.",
+    price: "Check Site",
+    link: "https://onizu.com/products/",
+    thumbnail: "https://placehold.co/400x250/1abc9c/FFF?text=ONIZU+QTO",
+    tags: ["Analysis", "Productivity", "Global"]
+  },
+  {
+    name: "ONIZU Selection Tool",
+    company: "ONIZU",
+    description: "Add-on for quick selection and filtration of elements in Archicad based on various parameters, with model checking capabilities.",
+    price: "Check Site",
+    link: "https://onizu.com/products/",
+    thumbnail: "https://placehold.co/400x250/3498db/FFF?text=ONIZU+Selection",
+    tags: ["Productivity", "Global"]
+  },
+  {
+    name: "ONIZU Parametric Objects",
+    company: "ONIZU",
+    description: "Collection of parametric GDL objects for Archicad designed to streamline layout design workflows.",
+    price: "Check Site",
+    link: "https://onizu.com/products/",
+    thumbnail: "https://placehold.co/400x250/9b59b6/FFF?text=ONIZU+Objects",
+    tags: ["Library", "Modeling", "Global"]
+  },
   // --- PAZ ACADEMY ADD-ONS (Switzerland) ---
   {
     name: "PAZ Fassadengenerator",
