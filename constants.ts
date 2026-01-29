@@ -1,6 +1,61 @@
 import { AddOn } from './types';
 
 export const ADDONS: AddOn[] = [
+  // --- BIMDOTS ADD-ONS ---
+  {
+    name: "Property Highlighter",
+    company: "Bimdots",
+    description: "Visually inspect your BIM model to quickly identify issues by selecting any property and seeing its values directly visualized within the model.",
+    price: "Paid",
+    link: "https://bimdots.com/shop/",
+    thumbnail: "https://placehold.co/400x250/e74c3c/FFF?text=Property+Highlighter",
+    tags: ["Analysis", "Productivity", "Global"]
+  },
+  {
+    name: "Property Palette",
+    company: "Bimdots",
+    description: "Simplifies editing of common parameters and user-defined properties for multiple selected elements, even different types. Search and pin frequently used properties.",
+    price: "Paid",
+    link: "https://bimdots.com/product/property-palette/",
+    thumbnail: "https://placehold.co/400x250/3498db/FFF?text=Property+Palette",
+    tags: ["Productivity", "Global"]
+  },
+  {
+    name: "Layer Palette",
+    company: "Bimdots",
+    description: "Adjust visibility, locking, and wireframe status of layers without opening layer settings. Features layer highlighting, inverting visibility, and saving as layer combination.",
+    price: "Paid",
+    link: "https://bimdots.com/shop/",
+    thumbnail: "https://placehold.co/400x250/2ecc71/FFF?text=Layer+Palette",
+    tags: ["Productivity", "Global"]
+  },
+  {
+    name: "Project Health Check",
+    company: "Bimdots",
+    description: "Conducts specific checks on BIM models, presented as a palette for convenient exploration of results. Detects static annotations, dimensions, and labels.",
+    price: "Paid",
+    link: "https://bimdots.com/shop/",
+    thumbnail: "https://placehold.co/400x250/9b59b6/FFF?text=Project+Health+Check",
+    tags: ["Analysis", "Productivity", "Global"]
+  },
+  {
+    name: "Command Finder",
+    company: "Bimdots",
+    description: "Quickly search for commands in Archicad. Free add-on for improved workflow efficiency.",
+    price: "Free",
+    link: "https://bimdots.com/shop/",
+    thumbnail: "https://placehold.co/400x250/f39c12/FFF?text=Command+Finder",
+    tags: ["Productivity", "Free", "Global"]
+  },
+  {
+    name: "Polygon Cleaner",
+    company: "Bimdots",
+    description: "Cleans and optimizes polygons in Archicad, preserving area text for fills.",
+    price: "Paid",
+    link: "https://bimdots.com/shop/",
+    thumbnail: "https://placehold.co/400x250/1abc9c/FFF?text=Polygon+Cleaner",
+    tags: ["Modeling", "Productivity", "Global"]
+  },
   // --- ARCHI-XT ADD-ONS ---
   {
     name: "Room Coverings",
