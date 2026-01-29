@@ -2105,6 +2105,70 @@ export const ADDONS: AddOn[] = [
     thumbnail: "https://placehold.co/400x250/3498db/FFF?text=Goodies+CEE",
     tags: ["Productivity", "Slovakia", "Romania", "Bulgaria"]
   },
+  // --- HUNGARY / POLAND / CZECH ADD-ONS ---
+  {
+    name: "eptar Architerra",
+    company: "eptar.hu (Hungary)",
+    description: "3D terrain modeling add-on; creates and manages large site models with roads, platforms, and meshes from survey data.",
+    price: "Paid",
+    link: "https://www.eptar.hu/Architerra",
+    thumbnail: "https://placehold.co/400x250/27ae60/FFF?text=eptar+Architerra",
+    tags: ["Modeling", "Hungary"]
+  },
+  {
+    name: "eptar Reinforcement",
+    company: "eptar.hu (Hungary)",
+    description: "Structural reinforcement detailing add-on; places rebars, meshes, stirrups with automatic labeling and scheduling.",
+    price: "Paid",
+    link: "https://www.eptar.hu/Reinforcement",
+    thumbnail: "https://placehold.co/400x250/e74c3c/FFF?text=eptar+Reinforcement",
+    tags: ["Modeling", "Analysis", "Hungary"]
+  },
+  {
+    name: "eptar Tiling",
+    company: "eptar.hu (Hungary)",
+    description: "Tiling layout add-on; designs and calculates tiled surfaces (floors/walls/roofs) with custom patterns and libraries.",
+    price: "Paid",
+    link: "https://www.eptar.hu/Tiling",
+    thumbnail: "https://placehold.co/400x250/3498db/FFF?text=eptar+Tiling",
+    tags: ["Modeling", "Hungary"]
+  },
+  {
+    name: "eptar Wall Accessories",
+    company: "eptar.hu (Hungary)",
+    description: "Accessories for walls including claddings and finishes; extends standard Archicad wall capabilities.",
+    price: "Paid",
+    link: "https://www.eptar.hu/WallAccessories",
+    thumbnail: "https://placehold.co/400x250/9b59b6/FFF?text=eptar+Wall",
+    tags: ["Modeling", "Hungary"]
+  },
+  {
+    name: "Multibim TOOLS",
+    company: "Multibim.pl (Poland)",
+    description: "Suite of productivity add-ons; automates tasks like element numbering, data export, and model checking for Polish workflows.",
+    price: "Paid",
+    link: "https://www.multibim.pl/multibim-tools",
+    thumbnail: "https://placehold.co/400x250/e67e22/FFF?text=Multibim+TOOLS",
+    tags: ["Productivity", "Poland"]
+  },
+  {
+    name: "BIMTech Tools CZ",
+    company: "BIMtech.cz (Czech Republic)",
+    description: "Multi-tool add-on for cadastral maps, building elements, and terrain from point clouds; integrates GIS data into Archicad.",
+    price: "Paid",
+    link: "https://bimtech.cz/en",
+    thumbnail: "https://placehold.co/400x250/16a085/FFF?text=BIMTech+CZ",
+    tags: ["Import/Export", "Modeling", "Czech Republic"]
+  },
+  {
+    name: "CETRIS Add-on CZ",
+    company: "CETRIS.cz (Czech Republic)",
+    description: "Catalog add-on for CETRIS cement-bonded chipboard panels; inserts products with specifications into models.",
+    price: "Free",
+    link: "https://www.cetris.cz/en/bim-object",
+    thumbnail: "https://placehold.co/400x250/7f8c8d/FFF?text=CETRIS+CZ",
+    tags: ["Library", "Czech Republic"]
+  },
   // --- RUSSIA ADD-ONS ---
   {
     name: "Goodies Suite RUS",
