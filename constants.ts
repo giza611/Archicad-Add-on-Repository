@@ -1,6 +1,80 @@
 import { AddOn } from './types';
 
 export const ADDONS: AddOn[] = [
+  // --- ARCHI-XT ADD-ONS ---
+  {
+    name: "Room Coverings",
+    company: "Archi-XT (Bernd Schwarzenbacher)",
+    description: "Add-on for managing room coverings in Archicad projects.",
+    price: "Check Site",
+    link: "https://archi-xt.com/",
+    thumbnail: "https://placehold.co/400x250/e74c3c/FFF?text=Room+Coverings",
+    tags: ["Modeling", "Productivity", "Austria"]
+  },
+  {
+    name: "Live TOP-Stamp",
+    company: "Archi-XT (Bernd Schwarzenbacher)",
+    description: "Dynamic stamp tool for Archicad with live updating capabilities.",
+    price: "Check Site",
+    link: "https://archi-xt.com/",
+    thumbnail: "https://placehold.co/400x250/3498db/FFF?text=Live+TOP-Stamp",
+    tags: ["Documentation", "Productivity", "Austria"]
+  },
+  {
+    name: "Save Layer Settings",
+    company: "Archi-XT (Bernd Schwarzenbacher)",
+    description: "Tool for saving and managing layer settings in Archicad.",
+    price: "Check Site",
+    link: "https://archi-xt.com/",
+    thumbnail: "https://placehold.co/400x250/2ecc71/FFF?text=Save+Layer",
+    tags: ["Productivity", "Austria"]
+  },
+  {
+    name: "Ortho Tool",
+    company: "Archi-XT (Bernd Schwarzenbacher)",
+    description: "Orthographic drawing assistance tool for Archicad.",
+    price: "Check Site",
+    link: "https://archi-xt.com/",
+    thumbnail: "https://placehold.co/400x250/9b59b6/FFF?text=Ortho+Tool",
+    tags: ["Modeling", "Austria"]
+  },
+  {
+    name: "Pen Manager",
+    company: "Archi-XT (Bernd Schwarzenbacher)",
+    description: "Tool for managing pen settings and configurations in Archicad.",
+    price: "Check Site",
+    link: "https://archi-xt.com/",
+    thumbnail: "https://placehold.co/400x250/f39c12/FFF?text=Pen+Manager",
+    tags: ["Productivity", "Austria"]
+  },
+  {
+    name: "AC Bug Report Killer",
+    company: "Archi-XT (Bernd Schwarzenbacher)",
+    description: "Utility to manage and suppress bug reports in Archicad.",
+    price: "Check Site",
+    link: "https://archi-xt.com/",
+    thumbnail: "https://placehold.co/400x250/34495e/FFF?text=Bug+Report+Killer",
+    tags: ["Productivity", "Austria"]
+  },
+  {
+    name: "MVO Properties Label",
+    company: "Archi-XT (Bernd Schwarzenbacher)",
+    description: "GDL object for labeling MVO properties in Archicad.",
+    price: "Check Site",
+    link: "https://archi-xt.com/",
+    thumbnail: "https://placehold.co/400x250/16a085/FFF?text=MVO+Label",
+    tags: ["Library", "Documentation", "Austria"]
+  },
+  // --- AIRC.DIGITAL ---
+  {
+    name: "AIRC Digital Services",
+    company: "AIRC Digital",
+    description: "Custom Archicad templates, OpenBIM workflow development, and specialized services including 3D detailing, point cloud management, and environmental modeling.",
+    price: "Check Site",
+    link: "https://airc.digital/archicad/",
+    thumbnail: "https://placehold.co/400x250/1abc9c/FFF?text=AIRC+Digital",
+    tags: ["Template", "Productivity", "Global"]
+  },
   // --- ONIZU ADD-ONS ---
   {
     name: "ONIZU Quantity Take-off Tool",
