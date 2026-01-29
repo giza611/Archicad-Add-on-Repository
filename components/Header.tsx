@@ -113,6 +113,13 @@ const Header: React.FC<HeaderProps> = ({
                     <h3 className="font-semibold text-gray-700 dark:text-gray-200 text-sm">Quick Filters</h3>
                     <div className="flex gap-2 text-xs">
                        <button
+                        onClick={() => setSortOrder('popular')}
+                        className={`px-2 py-1 rounded border ${sortOrder === 'popular' ? 'bg-primary text-white border-primary' : 'bg-white dark:bg-gray-600 text-gray-600 dark:text-gray-300 border-gray-300 dark:border-gray-500'}`}
+                        title="Sort by popularity"
+                      >
+                         <i className="fas fa-fire"></i>
+                       </button>
+                       <button
                         onClick={() => setSortOrder('asc')}
                         className={`px-2 py-1 rounded border ${sortOrder === 'asc' ? 'bg-primary text-white border-primary' : 'bg-white dark:bg-gray-600 text-gray-600 dark:text-gray-300 border-gray-300 dark:border-gray-500'}`}
                       >

@@ -3,10 +3,16 @@ import { AddOn } from '../types';
 
 interface AddonCardProps {
   addon: AddOn;
+  clickCount: number;
+  onAddonClick: (addonName: string) => void;
 }
 
-const AddonCard: React.FC<AddonCardProps> = ({ addon }) => {
+const AddonCard: React.FC<AddonCardProps> = ({ addon, clickCount, onAddonClick }) => {
   const isFree = addon.price.toLowerCase().includes('free');
+
+  const handleClick = () => {
+    onAddonClick(addon.name);
+  };
   
   return (
     <div className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full border border-gray-100 dark:border-gray-700 group">
@@ -17,6 +23,12 @@ const AddonCard: React.FC<AddonCardProps> = ({ addon }) => {
           className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
           loading="lazy"
         />
+        <div className="absolute top-3 left-3">
+          <span className="px-2 py-1 rounded-full text-xs font-semibold shadow-sm bg-gray-900/70 text-white flex items-center gap-1">
+            <i className="fas fa-mouse-pointer text-[10px]"></i>
+            {clickCount}
+          </span>
+        </div>
         <div className="absolute top-3 right-3">
           <span className={`px-3 py-1 rounded-full text-xs font-bold shadow-sm ${
             isFree
@@ -59,6 +71,7 @@ const AddonCard: React.FC<AddonCardProps> = ({ addon }) => {
           href={addon.link}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={handleClick}
           className="block w-full text-center bg-gray-50 dark:bg-gray-700 hover:bg-primary hover:text-white text-primary font-semibold py-2.5 px-4 rounded-lg border border-primary/20 dark:border-primary/40 hover:border-transparent transition-all duration-200"
         >
           Visit Website

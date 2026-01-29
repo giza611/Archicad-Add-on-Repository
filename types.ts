@@ -9,4 +9,8 @@ export interface AddOn {
 }
 
 export type ViewMode = 'grid' | 'list';
-export type SortOrder = 'asc' | 'desc';
+export type SortOrder = 'asc' | 'desc' | 'popular';
+
+export interface ClickCounts {
+  [key: string]: number;
+}

@@ -3,10 +3,16 @@ import { AddOn } from '../types';
 
 interface AddonListItemProps {
   addon: AddOn;
+  clickCount: number;
+  onAddonClick: (addonName: string) => void;
 }
 
-const AddonListItem: React.FC<AddonListItemProps> = ({ addon }) => {
+const AddonListItem: React.FC<AddonListItemProps> = ({ addon, clickCount, onAddonClick }) => {
   const isFree = addon.price.toLowerCase().includes('free');
+
+  const handleClick = () => {
+    onAddonClick(addon.name);
+  };
 
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-100 dark:border-gray-700 p-4 flex flex-col sm:flex-row items-start sm:items-center gap-4">
@@ -58,11 +64,16 @@ const AddonListItem: React.FC<AddonListItemProps> = ({ addon }) => {
           </span>
         </div>
 
-        <div className="sm:col-span-2 text-right">
+        <div className="sm:col-span-2 text-right flex items-center justify-end gap-3">
+          <span className="text-xs text-gray-400 dark:text-gray-500 flex items-center gap-1">
+            <i className="fas fa-mouse-pointer"></i>
+            {clickCount}
+          </span>
           <a
             href={addon.link}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={handleClick}
             className="text-sm font-semibold text-primary hover:text-primary-dark hover:underline flex items-center justify-end gap-1"
           >
             Visit <i className="fas fa-external-link-alt text-xs ml-1"></i>

@@ -3,13 +3,14 @@ import Header from './components/Header';
 import AddonCard from './components/AddonCard';
 import AddonListItem from './components/AddonListItem';
 import { ADDONS } from './constants';
-import { ViewMode, SortOrder } from './types';
+import { ViewMode, SortOrder, ClickCounts } from './types';
+import { getAllClickCounts, trackClick, updateLocalCache } from './utils/clickTracker';
 
 const App: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<ViewMode>('grid');
   const [activeTags, setActiveTags] = useState<string[]>([]);
-  const [sortOrder, setSortOrder] = useState<SortOrder>('asc');
+  const [sortOrder, setSortOrder] = useState<SortOrder>('popular');
   const [darkMode, setDarkMode] = useState(() => {
     if (typeof window !== 'undefined') {
       const saved = localStorage.getItem('darkMode');
@@ -17,6 +18,29 @@ const App: React.FC = () => {
     }
     return false;
   });
+  const [clickCounts, setClickCounts] = useState<ClickCounts>({});
+  const [isLoadingCounts, setIsLoadingCounts] = useState(true);
+
+  // Load click counts on mount
+  useEffect(() => {
+    const loadClickCounts = async () => {
+      setIsLoadingCounts(true);
+      const addonNames = ADDONS.map(a => a.name);
+      const counts = await getAllClickCounts(addonNames);
+      setClickCounts(counts);
+      setIsLoadingCounts(false);
+    };
+    loadClickCounts();
+  }, []);
+
+  // Handle addon click
+  const handleAddonClick = async (addonName: string) => {
+    const newCount = await trackClick(addonName);
+    if (newCount > 0) {
+      setClickCounts(prev => ({ ...prev, [addonName]: newCount }));
+      updateLocalCache(addonName, newCount);
+    }
+  };
 
   useEffect(() => {
     if (darkMode) {
@@ -69,6 +93,11 @@ const App: React.FC = () => {
 
     // Sort
     result.sort((a, b) => {
+      if (sortOrder === 'popular') {
+        const countA = clickCounts[a.name] || 0;
+        const countB = clickCounts[b.name] || 0;
+        return countB - countA; // Descending by popularity
+      }
       const nameA = a.name.toLowerCase();
       const nameB = b.name.toLowerCase();
       if (sortOrder === 'asc') {
@@ -79,7 +108,7 @@ const App: React.FC = () => {
     });
 
     return result;
-  }, [searchTerm, activeTags, sortOrder]);
+  }, [searchTerm, activeTags, sortOrder, clickCounts]);
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
@@ -158,9 +187,17 @@ const App: React.FC = () => {
               {filteredAndSortedAddons.map((addon) => (
                 <React.Fragment key={addon.name}>
                   {viewMode === 'grid' ? (
-                    <AddonCard addon={addon} />
+                    <AddonCard
+                      addon={addon}
+                      clickCount={clickCounts[addon.name] || 0}
+                      onAddonClick={handleAddonClick}
+                    />
                   ) : (
-                    <AddonListItem addon={addon} />
+                    <AddonListItem
+                      addon={addon}
+                      clickCount={clickCounts[addon.name] || 0}
+                      onAddonClick={handleAddonClick}
+                    />
                   )}
                 </React.Fragment>
               ))}
