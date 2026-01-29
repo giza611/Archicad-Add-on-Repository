@@ -59,7 +59,7 @@ const Header: React.FC<HeaderProps> = ({
               title="Refresh page"
             >
               <img
-                src="https://graphisoft.com/themes/flavor/graphisoft/logo/favicon/archicad-32x32.png"
+                src="./archicad_logo_icon_247566.svg"
                 alt="Archicad Logo"
                 className="w-10 h-10"
               />
