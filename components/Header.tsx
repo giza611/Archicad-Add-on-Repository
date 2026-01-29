@@ -55,14 +55,10 @@ const Header: React.FC<HeaderProps> = ({
           <div className="flex items-center gap-3">
             <button
               onClick={() => window.location.reload()}
-              className="w-10 h-10 flex items-center justify-center hover:opacity-80 transition-opacity cursor-pointer"
+              className="w-10 h-10 flex items-center justify-center bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors cursor-pointer"
               title="Refresh page"
             >
-              <img
-                src="./archicad_logo_icon_247566.svg"
-                alt="Archicad Logo"
-                className="w-10 h-10"
-              />
+              <i className="fas fa-puzzle-piece text-xl"></i>
             </button>
             <div>
               <h1 className="text-xl font-bold text-gray-900 dark:text-gray-100 leading-tight">
