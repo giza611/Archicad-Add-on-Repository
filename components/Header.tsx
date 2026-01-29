@@ -53,9 +53,17 @@ const Header: React.FC<HeaderProps> = ({
 
           {/* Logo / Title */}
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center shadow-lg transform rotate-3">
-              <i className="fas fa-cubes text-xl"></i>
-            </div>
+            <button
+              onClick={() => window.location.reload()}
+              className="w-10 h-10 flex items-center justify-center hover:opacity-80 transition-opacity cursor-pointer"
+              title="Refresh page"
+            >
+              <img
+                src="https://graphisoft.com/themes/flavor/graphisoft/logo/favicon/archicad-32x32.png"
+                alt="Archicad Logo"
+                className="w-10 h-10"
+              />
+            </button>
             <div>
               <h1 className="text-xl font-bold text-gray-900 dark:text-gray-100 leading-tight">
                 Archicad Add-on <span className="text-primary">Repository</span>

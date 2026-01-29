@@ -169,14 +169,12 @@ const App: React.FC = () => {
         )}
       </main>
 
-      <footer className="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 mt-auto transition-colors duration-300">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-center md:text-left">
+      <footer className="sticky bottom-0 z-40 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 transition-colors duration-300 shadow-[0_-2px_10px_rgba(0,0,0,0.1)]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col sm:flex-row justify-between items-center gap-2">
+          <div className="text-center sm:text-left">
             <p className="text-sm text-gray-500 dark:text-gray-400">
-              © {new Date().getFullYear()} Archicad Add-on Repository. All rights reserved.
-            </p>
-            <p className="text-xs text-gray-400 dark:text-gray-500 mt-1">
-              by Gëzim Radoniqi
+              © {new Date().getFullYear()} Archicad Add-on Repository
+              <span className="text-xs text-gray-400 dark:text-gray-500 ml-2">by Gëzim Radoniqi</span>
             </p>
           </div>
           <div className="flex gap-4">
