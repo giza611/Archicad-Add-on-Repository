@@ -230,7 +230,7 @@ export const ADDONS: AddOn[] = [
   },
   {
     name: "Archiframe",
-    company: "Archvista / ArchicadPlus",
+    company: "Archvista",
     description: "Timber framing and structural modeling.",
     price: "Paid",
     link: "https://archvista.com/product/archiframe-annual-subscription/",
@@ -301,105 +301,6 @@ export const ADDONS: AddOn[] = [
     tags: ["Modeling", "Paid", "New Zealand"]
   },
   {
-    name: "Easy Rotate",
-    company: "ArchicadPlus",
-    description: "Rotates objects by center point.",
-    price: "Paid",
-    link: "https://archicadplus.com/",
-    thumbnail: "https://placehold.co/400x250/1abc9c/FFF?text=Easy+Rotate",
-    tags: ["Productivity", "Paid"]
-  },
-  {
-    name: "Ai Dim",
-    company: "ArchicadPlus",
-    description: "Automatic dimensions.",
-    price: "Paid",
-    link: "https://archicadplus.com/",
-    thumbnail: "https://placehold.co/400x250/e74c3c/FFF?text=Ai+Dim",
-    tags: ["Documentation", "Paid"]
-  },
-  {
-    name: "2D2BIM",
-    company: "ArchicadPlus",
-    description: "Converts DWG to BIM.",
-    price: "Check Site",
-    link: "https://archicadplus.com/",
-    thumbnail: "https://placehold.co/400x250/3498db/FFF?text=2D2BIM",
-    tags: ["Import/Export"]
-  },
-  {
-    name: "AION",
-    company: "ArchicadPlus",
-    description: "Modeling tool.",
-    price: "Check Site",
-    link: "https://archicadplus.com/",
-    thumbnail: "https://placehold.co/400x250/9b59b6/FFF?text=AION",
-    tags: ["Modeling"]
-  },
-  {
-    name: "EPTHAR",
-    company: "ArchicadPlus",
-    description: "Modeling tool.",
-    price: "Check Site",
-    link: "https://archicadplus.com/",
-    thumbnail: "https://placehold.co/400x250/34495e/FFF?text=EPTHAR",
-    tags: ["Modeling", "Hungary"]
-  },
-  {
-    name: "ARCHIRADAR",
-    company: "ArchicadPlus",
-    description: "Modeling tool.",
-    price: "Check Site",
-    link: "https://archicadplus.com/",
-    thumbnail: "https://placehold.co/400x250/16a085/FFF?text=ARCHIRADAR",
-    tags: ["Modeling", "Italy"]
-  },
-  {
-    name: "BIM BAKERY",
-    company: "ArchicadPlus",
-    description: "Modeling tool.",
-    price: "Check Site",
-    link: "https://archicadplus.com/",
-    thumbnail: "https://placehold.co/400x250/d35400/FFF?text=BIM+BAKERY",
-    tags: ["Modeling"]
-  },
-  {
-    name: "LAND4",
-    company: "ArchicadPlus",
-    description: "Landscape modeling.",
-    price: "Paid",
-    link: "https://archicadplus.com/",
-    thumbnail: "https://placehold.co/400x250/27ae60/FFF?text=LAND4",
-    tags: ["Landscape", "Paid"]
-  },
-  {
-    name: "CADSWIFT",
-    company: "ArchicadPlus",
-    description: "Modeling tool.",
-    price: "Check Site",
-    link: "https://archicadplus.com/",
-    thumbnail: "https://placehold.co/400x250/2c3e50/FFF?text=CADSWIFT",
-    tags: ["Modeling", "Australia"]
-  },
-  {
-    name: "ONIZU",
-    company: "ArchicadPlus",
-    description: "Modeling tool.",
-    price: "Check Site",
-    link: "https://archicadplus.com/",
-    thumbnail: "https://placehold.co/400x250/8e44ad/FFF?text=ONIZU",
-    tags: ["Modeling"]
-  },
-  {
-    name: "ARCHI-XT",
-    company: "ArchicadPlus",
-    description: "Modeling tool.",
-    price: "Check Site",
-    link: "https://archicadplus.com/",
-    thumbnail: "https://placehold.co/400x250/7f8c8d/FFF?text=ARCHI-XT",
-    tags: ["Modeling"]
-  },
-  {
     name: "tAPIr",
     company: "Archicad API Community",
     description: "Open-source Python and Grasshopper plugin for Archicad automation. Simplifies access to Archicad APIs with JSON interface, Python library, and visual node-based Grasshopper workflows.",
@@ -409,26 +310,8 @@ export const ADDONS: AddOn[] = [
     tags: ["Productivity", "Import/Export", "Global"]
   },
   {
-    name: "BIMTECH",
-    company: "ArchicadPlus",
-    description: "Modeling tool.",
-    price: "Check Site",
-    link: "https://archicadplus.com/",
-    thumbnail: "https://placehold.co/400x250/2980b9/FFF?text=BIMTECH",
-    tags: ["Modeling"]
-  },
-  {
-    name: "BIMDOTS",
-    company: "ArchicadPlus / bimdots.com",
-    description: "Modeling and add-on installation.",
-    price: "Check Site",
-    link: "https://archicadplus.com/",
-    thumbnail: "https://placehold.co/400x250/c0392b/FFF?text=BIMDOTS",
-    tags: ["Modeling"]
-  },
-  {
     name: "ARCHIBITES",
-    company: "ArchicadPlus",
+    company: "Archibites",
     description: "Modeling tool.",
     price: "Check Site",
     link: "https://archibites.tech/",
@@ -436,22 +319,13 @@ export const ADDONS: AddOn[] = [
     tags: ["Modeling"]
   },
   {
-    name: "AIRC.DIGITAL",
-    company: "ArchicadPlus / AIRC",
-    description: "Parametric tools.",
-    price: "Check Site",
-    link: "https://airc.digital/",
-    thumbnail: "https://placehold.co/400x250/1abc9c/FFF?text=AIRC.DIGITAL",
-    tags: ["Modeling", "Parametric"]
-  },
-  {
     name: "MULTICONN",
-    company: "ArchicadPlus",
+    company: "SzamosiMate",
     description: "Multi-connection tool.",
-    price: "Check Site",
+    price: "Free",
     link: "https://github.com/SzamosiMate/multiconn_archicad",
     thumbnail: "https://placehold.co/400x250/34495e/FFF?text=MULTICONN",
-    tags: ["Productivity"]
+    tags: ["Productivity", "Free"]
   },
   {
     name: "Parametric Fixed Ladder",
@@ -493,7 +367,7 @@ export const ADDONS: AddOn[] = [
   },
   {
     name: "Twinmotion",
-    company: "Epic Games / ArchicadPlus",
+    company: "Epic Games",
     description: "Real-time visualization.",
     price: "Free/Paid",
     link: "https://www.twinmotion.com/en-US/plugins",
@@ -502,10 +376,10 @@ export const ADDONS: AddOn[] = [
   },
   {
     name: "Lumion",
-    company: "Lumion / ArchicadPlus",
-    description: "Rendering software.",
+    company: "Lumion",
+    description: "Rendering software with LiveSync for Archicad.",
     price: "Paid",
-    link: "https://archicadplus.com/",
+    link: "https://lumion.com/livesync-for-archicad.html",
     thumbnail: "https://placehold.co/400x250/3498db/FFF?text=Lumion",
     tags: ["Visualization", "Paid"]
   },
@@ -520,61 +394,34 @@ export const ADDONS: AddOn[] = [
   },
   {
     name: "Maxon Redshift",
-    company: "Maxon / ArchicadPlus",
+    company: "Maxon",
     description: "GPU rendering.",
     price: "Paid",
-    link: "https://archicadplus.com/",
+    link: "https://www.maxon.net/en/redshift",
     thumbnail: "https://placehold.co/400x250/c0392b/FFF?text=Redshift",
     tags: ["Visualization", "Paid", "Germany"]
   },
   {
     name: "Maxwell",
-    company: "Next Limit / ArchicadPlus",
+    company: "Next Limit",
     description: "Physically-based rendering.",
     price: "Paid",
-    link: "https://archicadplus.com/",
+    link: "https://maxwellrender.com/",
     thumbnail: "https://placehold.co/400x250/95a5a6/FFF?text=Maxwell",
     tags: ["Visualization", "Paid"]
   },
   {
     name: "Artlantis",
-    company: "Abvent / ArchicadPlus",
+    company: "Abvent",
     description: "Rendering and animation.",
     price: "Paid",
-    link: "https://archicadplus.com/",
+    link: "https://artlantis.com/",
     thumbnail: "https://placehold.co/400x250/d35400/FFF?text=Artlantis",
     tags: ["Visualization", "Paid", "France"]
   },
   {
-    name: "Octane",
-    company: "OTOY / ArchicadPlus",
-    description: "GPU rendering.",
-    price: "Paid",
-    link: "https://archicadplus.com/",
-    thumbnail: "https://placehold.co/400x250/2c3e50/FFF?text=Octane",
-    tags: ["Visualization", "Paid"]
-  },
-  {
-    name: "Corona",
-    company: "Chaos / ArchicadPlus",
-    description: "Rendering engine (alpha).",
-    price: "Paid",
-    link: "https://archicadplus.com/",
-    thumbnail: "https://placehold.co/400x250/f39c12/FFF?text=Corona",
-    tags: ["Visualization", "Paid"]
-  },
-  {
-    name: "3DS Max & V-Ray",
-    company: "Autodesk / ArchicadPlus",
-    description: "Advanced rendering.",
-    price: "Paid",
-    link: "https://archicadplus.com/",
-    thumbnail: "https://placehold.co/400x250/2c3e50/FFF?text=3DS+Max+VRay",
-    tags: ["Visualization", "Paid"]
-  },
-  {
     name: "AI Visualizer",
-    company: "Graphisoft / ArchicadPlus",
+    company: "Graphisoft",
     description: "AI-powered visualization.",
     price: "Free (Experimental)",
     link: "https://graphisoft.com/solutions/innovation/archicad-ai-visualizer",
@@ -648,93 +495,30 @@ export const ADDONS: AddOn[] = [
   },
   {
     name: "BIMcollab",
-    company: "BIMcollab / ArchicadPlus",
-    description: "BIM collaboration.",
+    company: "BIMcollab",
+    description: "BIM collaboration and issue management.",
     price: "Paid",
-    link: "https://archicadplus.com/",
+    link: "https://www.bimcollab.com/en/products/bimcollab-zoom",
     thumbnail: "https://placehold.co/400x250/16a085/FFF?text=BIMcollab",
     tags: ["Collaboration", "Paid"]
   },
   {
-    name: "ARCHI FM",
-    company: "ArchicadPlus",
-    description: "Facility management.",
+    name: "AxisVM",
+    company: "InterCAD",
+    description: "Structural analysis software with Archicad integration.",
     price: "Paid",
-    link: "https://archicadplus.com/",
-    thumbnail: "https://placehold.co/400x250/2ecc71/FFF?text=ARCHI+FM",
-    tags: ["FM", "Paid"]
+    link: "https://www.axisvm.eu/",
+    thumbnail: "https://placehold.co/400x250/d35400/FFF?text=AxisVM",
+    tags: ["Analysis", "Paid", "Hungary"]
   },
   {
-    name: "TEAM SYSTEMS",
-    company: "ArchicadPlus",
-    description: "Team collaboration.",
+    name: "BIMTrack",
+    company: "Newforma",
+    description: "Issue tracking and coordination platform.",
     price: "Paid",
-    link: "https://archicadplus.com/",
-    thumbnail: "https://placehold.co/400x250/3498db/FFF?text=TEAM+SYSTEMS",
+    link: "https://www.newforma.com/bimtrack/",
+    thumbnail: "https://placehold.co/400x250/7f8c8d/FFF?text=BIMTrack",
     tags: ["Collaboration", "Paid"]
-  },
-  {
-    name: "POINT CAB",
-    company: "ArchicadPlus",
-    description: "Point cloud integration.",
-    price: "Paid",
-    link: "https://archicadplus.com/",
-    thumbnail: "https://placehold.co/400x250/95a5a6/FFF?text=POINT+CAB",
-    tags: ["Import/Export", "Paid"]
-  },
-  {
-    name: "ORTHOGRAPH",
-    company: "ArchicadPlus",
-    description: "Orthographic tools.",
-    price: "Paid",
-    link: "https://archicadplus.com/",
-    thumbnail: "https://placehold.co/400x250/9b59b6/FFF?text=ORTHOGRAPH",
-    tags: ["Modeling", "Paid"]
-  },
-  {
-    name: "BIMM TOOL",
-    company: "ArchicadPlus",
-    description: "BIM management.",
-    price: "Paid",
-    link: "https://archicadplus.com/",
-    thumbnail: "https://placehold.co/400x250/34495e/FFF?text=BIMM+TOOL",
-    tags: ["BIM", "Paid"]
-  },
-  {
-    name: "AXIS VM",
-    company: "ArchicadPlus",
-    description: "Structural analysis.",
-    price: "Paid",
-    link: "https://archicadplus.com/",
-    thumbnail: "https://placehold.co/400x250/d35400/FFF?text=AXIS+VM",
-    tags: ["Analysis", "Paid"]
-  },
-  {
-    name: "BIMWINGS",
-    company: "ArchicadPlus",
-    description: "BIM tools.",
-    price: "Check Site",
-    link: "https://archicadplus.com/",
-    thumbnail: "https://placehold.co/400x250/f39c12/FFF?text=BIMWINGS",
-    tags: ["BIM"]
-  },
-  {
-    name: "BIMTRACK",
-    company: "ArchicadPlus",
-    description: "Issue tracking.",
-    price: "Paid",
-    link: "https://archicadplus.com/",
-    thumbnail: "https://placehold.co/400x250/7f8c8d/FFF?text=BIMTRACK",
-    tags: ["Collaboration", "Paid"]
-  },
-  {
-    name: "BIMEYE / INTERAXO",
-    company: "ArchicadPlus",
-    description: "Data management.",
-    price: "Paid",
-    link: "https://archicadplus.com/",
-    thumbnail: "https://placehold.co/400x250/2c3e50/FFF?text=BIMEYE",
-    tags: ["BIM", "Paid"]
   },
   {
     name: "Auto Publishing",
@@ -784,67 +568,13 @@ export const ADDONS: AddOn[] = [
     tags: ["Productivity", "Free", "Hungary"]
   },
   {
-    name: "ECODESIGNER",
-    company: "ArchicadPlus",
-    description: "Eco-design analysis.",
-    price: "Check Site",
-    link: "https://archicadplus.com/",
-    thumbnail: "https://placehold.co/400x250/2ecc71/FFF?text=ECODESIGNER",
-    tags: ["Analysis"]
-  },
-  {
-    name: "COVE TOOLS",
-    company: "ArchicadPlus / cove.tool",
-    description: "Analysis tools.",
+    name: "cove.tool",
+    company: "cove.tool",
+    description: "Energy analysis and daylight simulation tools.",
     price: "Paid",
     link: "https://help.covetool.com/en/articles/5662692-archicad-plugin-workflow-for-3d-and-daylight-mode",
-    thumbnail: "https://placehold.co/400x250/3498db/FFF?text=COVE+TOOLS",
+    thumbnail: "https://placehold.co/400x250/3498db/FFF?text=cove.tool",
     tags: ["Analysis", "Paid"]
-  },
-  {
-    name: "DESIGN LCA",
-    company: "ArchicadPlus",
-    description: "Lifecycle analysis.",
-    price: "Check Site",
-    link: "https://archicadplus.com/",
-    thumbnail: "https://placehold.co/400x250/95a5a6/FFF?text=DESIGN+LCA",
-    tags: ["Analysis"]
-  },
-  {
-    name: "LADYBUG TOOLS",
-    company: "ArchicadPlus",
-    description: "Environmental analysis.",
-    price: "Check Site",
-    link: "https://archicadplus.com/",
-    thumbnail: "https://placehold.co/400x250/d35400/FFF?text=LADYBUG",
-    tags: ["Analysis"]
-  },
-  {
-    name: "SUN PATH OBJECT",
-    company: "ArchicadPlus",
-    description: "Solar path visualization.",
-    price: "Check Site",
-    link: "https://archicadplus.com/",
-    thumbnail: "https://placehold.co/400x250/f39c12/FFF?text=SUN+PATH",
-    tags: ["Analysis"]
-  },
-  {
-    name: "LIGHTSTANZA",
-    company: "ArchicadPlus",
-    description: "Lighting analysis.",
-    price: "Check Site",
-    link: "https://archicadplus.com/",
-    thumbnail: "https://placehold.co/400x250/9b59b6/FFF?text=LIGHTSTANZA",
-    tags: ["Analysis"]
-  },
-  {
-    name: "SHADOW PLANNER",
-    company: "ArchicadPlus",
-    description: "Shadow analysis.",
-    price: "Check Site",
-    link: "https://archicadplus.com/",
-    thumbnail: "https://placehold.co/400x250/34495e/FFF?text=SHADOW+PLANNER",
-    tags: ["Analysis"]
   },
   {
     name: "One Click LCA",
@@ -892,24 +622,6 @@ export const ADDONS: AddOn[] = [
     tags: ["Modeling", "Free", "Paid"]
   },
   {
-    name: "Simpla Sync",
-    company: "ArchicadPlus",
-    description: "Sync for non-BIMCloud users.",
-    price: "Check Site",
-    link: "https://archicadplus.com/",
-    thumbnail: "https://placehold.co/400x250/16a085/FFF?text=Simpla+Sync",
-    tags: ["Productivity"]
-  },
-  {
-    name: "enzyme shop",
-    company: "ArchicadPlus",
-    description: "Productivity tools.",
-    price: "Check Site",
-    link: "https://archicadplus.com/",
-    thumbnail: "https://placehold.co/400x250/c0392b/FFF?text=Enzyme+Shop",
-    tags: ["Productivity"]
-  },
-  {
     name: "3Dfindit",
     company: "3Dfindit",
     description: "Component search.",
@@ -926,33 +638,6 @@ export const ADDONS: AddOn[] = [
     link: "https://www.visoid.com/plugin/archicad-plugin",
     thumbnail: "https://placehold.co/400x250/8e44ad/FFF?text=Visoid",
     tags: ["Visualization", "AI", "Paid"]
-  },
-  {
-    name: "NORKART",
-    company: "ArchicadPlus",
-    description: "Norway-specific tools.",
-    price: "Check Site",
-    link: "https://archicadplus.com/",
-    thumbnail: "https://placehold.co/400x250/2980b9/FFF?text=NORKART",
-    tags: ["Productivity", "Norway"]
-  },
-  {
-    name: "888 SOFTWARE",
-    company: "ArchicadPlus",
-    description: "Italy-specific BIM tools.",
-    price: "Check Site",
-    link: "https://archicadplus.com/",
-    thumbnail: "https://placehold.co/400x250/8e44ad/FFF?text=888+SOFTWARE",
-    tags: ["BIM", "Italy"]
-  },
-  {
-    name: "SMARTCON PLANNER",
-    company: "ArchicadPlus",
-    description: "Japan-specific planning.",
-    price: "Check Site",
-    link: "https://archicadplus.com/",
-    thumbnail: "https://placehold.co/400x250/2c3e50/FFF?text=SMARTCON",
-    tags: ["Productivity", "Japan"]
   },
 
   // --- GERMAN-SPEAKING REGION (DACH) ADD-ONS ---
