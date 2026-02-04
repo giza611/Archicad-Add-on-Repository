@@ -1480,33 +1480,6 @@ export const ADDONS: AddOn[] = [
   },
   // --- AUSTRALIA & NEW ZEALAND ADD-ONS ---
   {
-    name: "Ci Select Library",
-    company: "Central Innovation / Ci Tools",
-    description: "Comprehensive library of Australian/New Zealand BIM objects, materials, and details; exclusive for ANZ SSA, FWD, Archicad Subscription, or Ci Premium users.",
-    price: "Subscription",
-    link: "https://centralinnovation.com/aec/bim/archicad-studio",
-    thumbnail: "https://placehold.co/400x250/3498db/FFF?text=Ci+Select+Library",
-    tags: ["Library", "Australia", "New Zealand"]
-  },
-  {
-    name: "4D Library Tools",
-    company: "4D Library",
-    description: "Advanced Australian-developed libraries and tools optimized for Archicad users in Australia (focus on local needs like compliant objects and workflows).",
-    price: "Check Site",
-    link: "https://www.4dlibrary.com.au/",
-    thumbnail: "https://placehold.co/400x250/9b59b6/FFF?text=4D+Library",
-    tags: ["Library", "Australia"]
-  },
-  {
-    name: "CADSwift BIM Libraries",
-    company: "CADSwift",
-    description: "Premium Archicad BIM object libraries, design tools, and innovative solutions for Australian architects (productivity boosters, manufacturer models).",
-    price: "Check Site",
-    link: "https://cadswift.com.au/",
-    thumbnail: "https://placehold.co/400x250/e74c3c/FFF?text=CADSwift",
-    tags: ["Library", "Australia"]
-  },
-  {
     name: "BIM2YourQS",
     company: "YourQS",
     description: "3D costing technology plugin for Archicad; enables early cost estimation from models. Available for AU/NZ.",
@@ -1532,51 +1505,6 @@ export const ADDONS: AddOn[] = [
     link: "https://www.graphisoft.com/downloads/goodies/ac28-aus",
     thumbnail: "https://placehold.co/400x250/f39c12/FFF?text=Goodies+AUS",
     tags: ["Productivity", "Australia"]
-  },
-  {
-    name: "Dulux BIM Solutions",
-    company: "Dulux (NZ/AU)",
-    description: "Easy addition of Dulux colors and product ranges to Archicad models; includes add-ins for quick color application in projects.",
-    price: "Free",
-    link: "https://www.dulux.co.nz/specifier/tools-and-resources/bim",
-    thumbnail: "https://placehold.co/400x250/e67e22/FFF?text=Dulux+BIM",
-    tags: ["Library", "Australia", "New Zealand"]
-  },
-  {
-    name: "Resene BIM Paint Colours",
-    company: "Resene (NZ)",
-    description: "Quick integration of Resene paint colors via Archicad's Attribute Manager; supports BIM workflows.",
-    price: "Free",
-    link: "https://www.resene.co.nz/comn/services/archicad.htm",
-    thumbnail: "https://placehold.co/400x250/2ecc71/FFF?text=Resene+BIM",
-    tags: ["Library", "New Zealand"]
-  },
-  {
-    name: "Siniat BIM/CAD Models",
-    company: "Siniat (AU)",
-    description: "Direct download of Archicad models for Siniat systems (e.g., plasterboard); no install required via online selector.",
-    price: "Free",
-    link: "https://www.siniat.com.au/en-au/resources-link-page/bim--cad",
-    thumbnail: "https://placehold.co/400x250/7f8c8d/FFF?text=Siniat+BIM",
-    tags: ["Library", "Australia"]
-  },
-  {
-    name: "Britex ArchiCAD Library",
-    company: "Britex (AU)",
-    description: "Manufacturer-owned library of stainless steel architectural products as LCF files for Archicad.",
-    price: "Free",
-    link: "https://www.britex.com.au/blog/post/archicad-content-library-lcf-now-available",
-    thumbnail: "https://placehold.co/400x250/95a5a6/FFF?text=Britex",
-    tags: ["Library", "Australia"]
-  },
-  {
-    name: "Duracube ArchiCAD Models",
-    company: "Duracube / CADSwift (AU)",
-    description: "Best-in-class Archicad files for modular/building projects, integrated with CADSwift tools.",
-    price: "Free",
-    link: "https://duracube.com.au/duracube-archicad-models",
-    thumbnail: "https://placehold.co/400x250/34495e/FFF?text=Duracube",
-    tags: ["Library", "Australia"]
   },
   // --- USA ADD-ONS ---
   {
@@ -1894,42 +1822,6 @@ export const ADDONS: AddOn[] = [
   },
   // --- EASTERN EUROPE ADD-ONS ---
   {
-    name: "Wienerberger Plugin",
-    company: "Wienerberger (Slovakia)",
-    description: "BIM plugin + library for bricks/blocks in Archicad; direct insertion and planning of Wienerberger products.",
-    price: "Free",
-    link: "https://wienerberger.sk/sluzby-a-podpora",
-    thumbnail: "https://placehold.co/400x250/e74c3c/FFF?text=Wienerberger",
-    tags: ["Library", "Slovakia"]
-  },
-  {
-    name: "CETRIS Add-on",
-    company: "CETRIS (Slovakia)",
-    description: "Electronic catalog add-on for CETRIS cement chipboard panels; inserts products into Archicad 17+.",
-    price: "Free",
-    link: "https://cetris.sk/videa",
-    thumbnail: "https://placehold.co/400x250/7f8c8d/FFF?text=CETRIS",
-    tags: ["Library", "Slovakia"]
-  },
-  {
-    name: "Xella BIM Plugin",
-    company: "Xella (Slovakia)",
-    description: "BIM library/plugin for Ytong blocks; supports Archicad, Revit, Allplan.",
-    price: "Free",
-    link: "https://xella.sk/bim-kniznica",
-    thumbnail: "https://placehold.co/400x250/f39c12/FFF?text=Xella+BIM",
-    tags: ["Library", "Slovakia"]
-  },
-  {
-    name: "Rigips BIM Library",
-    company: "Rigips/Saint-Gobain",
-    description: "Drywall systems add-on (walls, claddings, floors); appears as tab in Archicad for easy insertion.",
-    price: "Free",
-    link: "https://rigips.ro",
-    thumbnail: "https://placehold.co/400x250/e74c3c/FFF?text=Rigips+BIM",
-    tags: ["Library", "Slovakia", "Romania"]
-  },
-  {
     name: "GeoPackage Manager",
     company: "CONSOFT (Romania)",
     description: "GIS add-on for Archicad; imports GeoPackage data (maps, layers) directly for site planning without external GIS apps.",
@@ -2001,15 +1893,6 @@ export const ADDONS: AddOn[] = [
     link: "https://bimtech.cz/en",
     thumbnail: "https://placehold.co/400x250/16a085/FFF?text=BIMTech+CZ",
     tags: ["Import/Export", "Modeling", "Czech Republic"]
-  },
-  {
-    name: "CETRIS Add-on CZ",
-    company: "CETRIS.cz (Czech Republic)",
-    description: "Catalog add-on for CETRIS cement-bonded chipboard panels; inserts products with specifications into models.",
-    price: "Free",
-    link: "https://www.cetris.cz/en/bim-object",
-    thumbnail: "https://placehold.co/400x250/7f8c8d/FFF?text=CETRIS+CZ",
-    tags: ["Library", "Czech Republic"]
   },
   // --- RUSSIA ADD-ONS ---
   {
