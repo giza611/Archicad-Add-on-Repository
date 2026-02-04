@@ -379,4 +379,76 @@ export const OBJECTS: GDLObject[] = [
     thumbnail: "https://placehold.co/400x250/e74c3c/FFF?text=Lammhults",
     tags: ["Free", "Furniture", "Chairs", "Tables", "Sweden"]
   },
+  {
+    name: "NanaWall BIM",
+    company: "NanaWall",
+    description: "Folding/sliding glass walls and doors; parametric objects for openings.",
+    price: "Free",
+    link: "https://nanawall.com/bim",
+    thumbnail: "https://placehold.co/400x250/3498db/FFF?text=NanaWall",
+    tags: ["Free", "Glass Walls", "Doors", "Openings", "USA"]
+  },
+  {
+    name: "Grohe BIM",
+    company: "Grohe",
+    description: "Faucets, showers, sanitary systems; via ProdLib or direct BIM libraries.",
+    price: "Free",
+    link: "https://grohe.com/bim",
+    thumbnail: "https://placehold.co/400x250/1abc9c/FFF?text=Grohe",
+    tags: ["Free", "Faucets", "Showers", "Sanitary", "Germany"]
+  },
+  {
+    name: "Uponor BIM",
+    company: "Uponor",
+    description: "Piping, underfloor heating systems; MEP-focused objects.",
+    price: "Free",
+    link: "https://uponor.com/bim",
+    thumbnail: "https://placehold.co/400x250/e67e22/FFF?text=Uponor",
+    tags: ["Free", "Piping", "Heating", "MEP", "Finland"]
+  },
+  {
+    name: "Velux BIM",
+    company: "Velux",
+    description: "Roof windows, skylights; parametric daylighting objects with simulation data.",
+    price: "Free",
+    link: "https://velux.com/bim",
+    thumbnail: "https://placehold.co/400x250/c0392b/FFF?text=Velux",
+    tags: ["Free", "Windows", "Skylights", "Daylighting", "Denmark"]
+  },
+  {
+    name: "Schüco BIM",
+    company: "Schüco",
+    description: "Aluminum windows, facades, doors; system-specific BIM content.",
+    price: "Free",
+    link: "https://schueco.com/bim",
+    thumbnail: "https://placehold.co/400x250/34495e/FFF?text=Sch%C3%BCco",
+    tags: ["Free", "Windows", "Facades", "Doors", "Aluminum", "Germany"]
+  },
+  {
+    name: "Knauf BIM",
+    company: "Knauf",
+    description: "Insulation, plasterboard systems; similar to Rigips (part of Knauf Group).",
+    price: "Free",
+    link: "https://knauf.com/bim",
+    thumbnail: "https://placehold.co/400x250/9b59b6/FFF?text=Knauf",
+    tags: ["Free", "Insulation", "Plasterboard", "Drywall", "Germany"]
+  },
+  {
+    name: "ASSA ABLOY Openings Studio",
+    company: "ASSA ABLOY",
+    description: "Doors, locks, hardware; advanced parametric objects via Openings Studio add-on.",
+    price: "Free",
+    link: "https://assaabloy.com/openings-studio",
+    thumbnail: "https://placehold.co/400x250/2c3e50/FFF?text=ASSA+ABLOY",
+    tags: ["Free", "Doors", "Locks", "Hardware", "Sweden"]
+  },
+  {
+    name: "Duracube BIM",
+    company: "Duracube",
+    description: "Modular bathroom pods; detailed sanitary objects.",
+    price: "Free",
+    link: "https://duracube.com.au/archicad-models",
+    thumbnail: "https://placehold.co/400x250/16a085/FFF?text=Duracube",
+    tags: ["Free", "Bathroom", "Modular", "Pods", "Australia"]
+  },
 ];
