@@ -51,7 +51,7 @@ const Header: React.FC<HeaderProps> = ({
   }, []);
 
   return (
-    <header className="bg-white dark:bg-gray-800 sticky top-0 z-50 border-b border-gray-200 dark:border-gray-700 shadow-sm transition-colors duration-300">
+    <header className="bg-dark-800 sticky top-0 z-50 border-b border-dark-600 shadow-lg transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
 
@@ -59,28 +59,28 @@ const Header: React.FC<HeaderProps> = ({
           <div className="flex items-center gap-3">
             <button
               onClick={() => window.location.reload()}
-              className="w-10 h-10 flex items-center justify-center bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors cursor-pointer"
+              className="w-10 h-10 flex items-center justify-center bg-primary text-dark-900 rounded-lg hover:bg-primary-light transition-colors cursor-pointer"
               title="Refresh page"
             >
               <i className="fas fa-puzzle-piece text-xl"></i>
             </button>
             <div>
-              <h1 className="text-xl font-bold text-gray-900 dark:text-gray-100 leading-tight">
+              <h1 className="text-xl font-bold text-white leading-tight">
                 Archicad <span className="text-primary">Repository</span>
               </h1>
-              <p className="text-xs text-gray-500 dark:text-gray-400 font-medium">
+              <p className="text-xs text-gray-400 font-medium">
                 {resultCount} {resultCount === 1 ? 'result' : 'results'} found
               </p>
             </div>
 
             {/* Page Type Toggle */}
-            <div className="flex bg-gray-100 dark:bg-gray-700 p-1 rounded-lg ml-4">
+            <div className="flex bg-dark-700 p-1 rounded-lg ml-4">
               <button
                 onClick={() => setPageType('addons')}
                 className={`flex items-center px-3 py-1.5 rounded-md text-sm font-medium transition-all ${
                   pageType === 'addons'
-                    ? 'bg-white dark:bg-gray-600 text-primary shadow-sm'
-                    : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'
+                    ? 'bg-primary text-dark-900 shadow-sm'
+                    : 'text-gray-400 hover:text-white'
                 }`}
               >
                 <i className="fas fa-plug mr-2"></i>
@@ -90,8 +90,8 @@ const Header: React.FC<HeaderProps> = ({
                 onClick={() => setPageType('objects')}
                 className={`flex items-center px-3 py-1.5 rounded-md text-sm font-medium transition-all ${
                   pageType === 'objects'
-                    ? 'bg-white dark:bg-gray-600 text-primary shadow-sm'
-                    : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'
+                    ? 'bg-primary text-dark-900 shadow-sm'
+                    : 'text-gray-400 hover:text-white'
                 }`}
               >
                 <i className="fas fa-cube mr-2"></i>
@@ -107,7 +107,7 @@ const Header: React.FC<HeaderProps> = ({
             <div className="relative flex-grow sm:flex-grow-0 sm:w-80" ref={searchRef}>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <i className="fas fa-search text-gray-400"></i>
+                  <i className="fas fa-search text-gray-500"></i>
                 </div>
                 <input
                   type="text"
@@ -115,20 +115,20 @@ const Header: React.FC<HeaderProps> = ({
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   onFocus={() => setShowFilters(true)}
-                  className="block w-full pl-10 pr-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg leading-5 bg-gray-50 dark:bg-gray-700 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:bg-white dark:focus:bg-gray-600 focus:ring-2 focus:ring-primary focus:border-primary sm:text-sm transition-colors"
+                  className="block w-full pl-10 pr-3 py-2 border border-dark-600 rounded-lg leading-5 bg-dark-700 text-gray-100 placeholder-gray-500 focus:outline-none focus:bg-dark-600 focus:ring-2 focus:ring-primary focus:border-primary sm:text-sm transition-colors"
                 />
                 <div className="absolute inset-y-0 right-0 pr-2 flex items-center">
                   {searchTerm && (
                     <button
                       onClick={() => setSearchTerm('')}
-                      className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 mr-2"
+                      className="text-gray-400 hover:text-white mr-2"
                     >
                       <i className="fas fa-times"></i>
                     </button>
                   )}
                   <button
                     onClick={() => setShowFilters(!showFilters)}
-                    className={`p-1 rounded hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-500 dark:text-gray-400 ${showFilters ? 'text-primary bg-gray-100 dark:bg-gray-600' : ''}`}
+                    className={`p-1 rounded hover:bg-dark-600 text-gray-400 ${showFilters ? 'text-primary bg-dark-600' : ''}`}
                     title="Toggle Filters"
                   >
                     <i className="fas fa-filter text-sm"></i>
@@ -138,26 +138,26 @@ const Header: React.FC<HeaderProps> = ({
 
               {/* Dropdown Panel */}
               {showFilters && (
-                <div className="absolute top-full left-0 w-full md:w-[400px] mt-2 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden z-50 animate-in fade-in slide-in-from-top-2 duration-200">
-                  <div className="p-4 bg-gray-50 dark:bg-gray-700 border-b border-gray-100 dark:border-gray-600 flex justify-between items-center">
-                    <h3 className="font-semibold text-gray-700 dark:text-gray-200 text-sm">Quick Filters</h3>
+                <div className="absolute top-full left-0 w-full md:w-[400px] mt-2 bg-dark-800 rounded-xl shadow-2xl border border-dark-600 overflow-hidden z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                  <div className="p-4 bg-dark-700 border-b border-dark-600 flex justify-between items-center">
+                    <h3 className="font-semibold text-gray-200 text-sm">Quick Filters</h3>
                     <div className="flex gap-2 text-xs">
                        <button
                         onClick={() => setSortOrder('popular')}
-                        className={`px-2 py-1 rounded border ${sortOrder === 'popular' ? 'bg-primary text-white border-primary' : 'bg-white dark:bg-gray-600 text-gray-600 dark:text-gray-300 border-gray-300 dark:border-gray-500'}`}
+                        className={`px-2 py-1 rounded border ${sortOrder === 'popular' ? 'bg-primary text-dark-900 border-primary' : 'bg-dark-600 text-gray-300 border-dark-500 hover:border-primary'}`}
                         title="Sort by popularity"
                       >
                          <i className="fas fa-fire"></i>
                        </button>
                        <button
                         onClick={() => setSortOrder('asc')}
-                        className={`px-2 py-1 rounded border ${sortOrder === 'asc' ? 'bg-primary text-white border-primary' : 'bg-white dark:bg-gray-600 text-gray-600 dark:text-gray-300 border-gray-300 dark:border-gray-500'}`}
+                        className={`px-2 py-1 rounded border ${sortOrder === 'asc' ? 'bg-primary text-dark-900 border-primary' : 'bg-dark-600 text-gray-300 border-dark-500 hover:border-primary'}`}
                       >
                          A-Z
                        </button>
                        <button
                         onClick={() => setSortOrder('desc')}
-                        className={`px-2 py-1 rounded border ${sortOrder === 'desc' ? 'bg-primary text-white border-primary' : 'bg-white dark:bg-gray-600 text-gray-600 dark:text-gray-300 border-gray-300 dark:border-gray-500'}`}
+                        className={`px-2 py-1 rounded border ${sortOrder === 'desc' ? 'bg-primary text-dark-900 border-primary' : 'bg-dark-600 text-gray-300 border-dark-500 hover:border-primary'}`}
                       >
                          Z-A
                        </button>
@@ -165,7 +165,7 @@ const Header: React.FC<HeaderProps> = ({
                   </div>
 
                   <div className="p-4 max-h-64 overflow-y-auto">
-                     <p className="text-xs font-bold text-gray-400 uppercase mb-2">Categories & Countries</p>
+                     <p className="text-xs font-bold text-gray-500 uppercase mb-2">Categories & Countries</p>
                      <div className="flex flex-wrap gap-2">
                       {availableTags.map(tag => (
                         <button
@@ -173,8 +173,8 @@ const Header: React.FC<HeaderProps> = ({
                           onClick={() => toggleTag(tag)}
                           className={`px-3 py-1 text-xs rounded-full border transition-all duration-200 ${
                             activeTags.includes(tag)
-                              ? 'bg-primary text-white border-primary shadow-sm'
-                              : 'bg-white dark:bg-gray-700 text-gray-600 dark:text-gray-300 border-gray-200 dark:border-gray-600 hover:border-primary hover:text-primary'
+                              ? 'bg-primary text-dark-900 border-primary shadow-sm'
+                              : 'bg-dark-700 text-gray-300 border-dark-600 hover:border-primary hover:text-primary'
                           }`}
                         >
                           {tag}
@@ -184,10 +184,10 @@ const Header: React.FC<HeaderProps> = ({
                   </div>
 
                   {(activeTags.length > 0) && (
-                     <div className="p-2 bg-gray-50 dark:bg-gray-700 border-t border-gray-100 dark:border-gray-600 text-center">
+                     <div className="p-2 bg-dark-700 border-t border-dark-600 text-center">
                         <button
                           onClick={() => activeTags.forEach(t => toggleTag(t))} // Clear all
-                          className="text-xs text-red-500 hover:text-red-700 font-medium"
+                          className="text-xs text-red-400 hover:text-red-300 font-medium"
                         >
                           Clear all filters
                         </button>
@@ -198,13 +198,13 @@ const Header: React.FC<HeaderProps> = ({
             </div>
 
             {/* View Toggles */}
-            <div className="flex bg-gray-100 dark:bg-gray-700 p-1 rounded-lg self-start sm:self-auto">
+            <div className="flex bg-dark-700 p-1 rounded-lg self-start sm:self-auto">
               <button
                 onClick={() => setViewMode('grid')}
                 className={`flex items-center px-3 py-1.5 rounded-md text-sm font-medium transition-all ${
                   viewMode === 'grid'
-                    ? 'bg-white dark:bg-gray-600 text-primary shadow-sm'
-                    : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'
+                    ? 'bg-primary text-dark-900 shadow-sm'
+                    : 'text-gray-400 hover:text-white'
                 }`}
                 aria-label="Grid view"
               >
@@ -215,8 +215,8 @@ const Header: React.FC<HeaderProps> = ({
                 onClick={() => setViewMode('list')}
                 className={`flex items-center px-3 py-1.5 rounded-md text-sm font-medium transition-all ${
                   viewMode === 'list'
-                    ? 'bg-white dark:bg-gray-600 text-primary shadow-sm'
-                    : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'
+                    ? 'bg-primary text-dark-900 shadow-sm'
+                    : 'text-gray-400 hover:text-white'
                 }`}
                 aria-label="List view"
               >
@@ -224,20 +224,6 @@ const Header: React.FC<HeaderProps> = ({
                 List
               </button>
             </div>
-
-            {/* Dark Mode Toggle */}
-            <button
-              onClick={() => setDarkMode(!darkMode)}
-              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
-              aria-label="Toggle dark mode"
-              title={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
-            >
-              {darkMode ? (
-                <i className="fas fa-sun text-yellow-400"></i>
-              ) : (
-                <i className="fas fa-moon"></i>
-              )}
-            </button>
           </div>
         </div>
       </div>

@@ -122,7 +122,7 @@ const App: React.FC = () => {
   }, [searchTerm, activeTags, sortOrder, clickCounts, pageType]);
 
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <div className="min-h-screen flex flex-col bg-dark-900 transition-colors duration-300">
       <Header
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
@@ -144,18 +144,18 @@ const App: React.FC = () => {
       {activeTags.length > 0 && (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-4">
           <div className="flex flex-wrap gap-2 items-center">
-            <span className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase mr-1">Active Filters:</span>
+            <span className="text-xs font-semibold text-gray-500 uppercase mr-1">Active Filters:</span>
             {activeTags.map(tag => (
-              <span key={tag} className="bg-primary text-white text-xs px-2 py-1 rounded-full flex items-center gap-1">
+              <span key={tag} className="bg-primary text-dark-900 text-xs px-2 py-1 rounded-full flex items-center gap-1">
                 {tag}
-                <button onClick={() => toggleTag(tag)} className="hover:text-red-200">
+                <button onClick={() => toggleTag(tag)} className="hover:text-red-600">
                   <i className="fas fa-times"></i>
                 </button>
               </span>
             ))}
             <button
               onClick={() => setActiveTags([])}
-              className="text-xs text-gray-500 dark:text-gray-400 underline hover:text-gray-800 dark:hover:text-gray-200 ml-2"
+              className="text-xs text-gray-400 underline hover:text-white ml-2"
             >
               Clear all
             </button>
@@ -167,13 +167,13 @@ const App: React.FC = () => {
 
         {filteredAndSortedItems.length === 0 ? (
           <div className="text-center py-20">
-            <div className="bg-gray-100 dark:bg-gray-800 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6">
-              <i className={`fas ${pageType === 'addons' ? 'fa-plug' : 'fa-cube'} text-gray-400 text-3xl`}></i>
+            <div className="bg-dark-700 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6 border border-dark-600">
+              <i className={`fas ${pageType === 'addons' ? 'fa-plug' : 'fa-cube'} text-gray-500 text-3xl`}></i>
             </div>
-            <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100">
+            <h3 className="text-lg font-medium text-white">
               No {pageType === 'addons' ? 'add-ons' : 'objects'} found
             </h3>
-            <p className="mt-1 text-gray-500 dark:text-gray-400">
+            <p className="mt-1 text-gray-400">
               {currentData.length === 0
                 ? `No ${pageType === 'addons' ? 'add-ons' : 'objects'} have been added yet.`
                 : 'Try adjusting your search terms or filters.'}
@@ -191,7 +191,7 @@ const App: React.FC = () => {
           <>
             {/* List Header (Only visible in list mode and large screens) */}
             {viewMode === 'list' && (
-              <div className="hidden sm:grid grid-cols-12 gap-4 px-4 py-2 mb-2 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+              <div className="hidden sm:grid grid-cols-12 gap-4 px-4 py-2 mb-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">
                 <div className="col-span-3 pl-14">Name</div>
                 <div className="col-span-2">Company</div>
                 <div className="col-span-4">Description</div>
@@ -227,16 +227,16 @@ const App: React.FC = () => {
         )}
       </main>
 
-      <footer className="sticky bottom-0 z-40 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 transition-colors duration-300 shadow-[0_-2px_10px_rgba(0,0,0,0.1)]">
+      <footer className="sticky bottom-0 z-40 bg-dark-800 border-t border-dark-600 transition-colors duration-300 shadow-[0_-2px_10px_rgba(0,0,0,0.3)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col sm:flex-row justify-between items-center gap-2">
           <div className="text-center sm:text-left">
-            <p className="text-sm text-gray-500 dark:text-gray-400">
+            <p className="text-sm text-gray-400">
               © {new Date().getFullYear()} Archicad Repository
-              <span className="text-xs text-gray-400 dark:text-gray-500 ml-2">by Gëzim Radoniqi</span>
+              <span className="text-xs text-gray-500 ml-2">by Gëzim Radoniqi</span>
             </p>
           </div>
           <div className="flex gap-4">
-             <a href="https://github.com/giza611/Archicad-Add-on-Repository" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+             <a href="https://github.com/giza611/Archicad-Add-on-Repository" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-primary transition-colors">
                <i className="fab fa-github text-xl"></i>
              </a>
           </div>

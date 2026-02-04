@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Archicad Add-on Repository</title>
+    <title>Archicad Repository - Add-ons & Objects</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
@@ -15,17 +15,28 @@
         theme: {
           extend: {
             colors: {
-              primary: '#0056b3',
-              'primary-dark': '#004494',
-              secondary: '#6c757d',
+              primary: '#22d3ee',
+              'primary-dark': '#06b6d4',
+              'primary-light': '#67e8f9',
+              secondary: '#64748b',
+              dark: {
+                900: '#0f0f1a',
+                800: '#1a1a2e',
+                700: '#252540',
+                600: '#2d2d4a',
+                500: '#3d3d5c',
+              }
             },
             fontFamily: {
-              sans: ['Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif'],
+              sans: ['Inter', 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif'],
             },
           },
         },
       };
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script type="importmap">
 {
   "imports": {
@@ -37,7 +48,7 @@
 </script>
 <link rel="stylesheet" href="/index.css">
 </head>
-  <body class="bg-gray-50 text-slate-800 antialiased">
+  <body class="bg-dark-900 text-gray-100 antialiased">
     <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
 </body>
