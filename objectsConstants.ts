@@ -222,4 +222,60 @@ export const OBJECTS: GDLObject[] = [
     thumbnail: "https://placehold.co/400x250/95a5a6/FFF?text=AC+Users+Assoc",
     tags: ["Free", "Paid", "Directory", "Resources", "Global"]
   },
+
+  // --- REGIONAL LIBRARIES ---
+  {
+    name: "ARCAT",
+    company: "ARCAT",
+    description: "US-based free BIM library with thousands of .gsm objects from North American manufacturers (doors, windows, furniture); searchable by category and spec-compliant.",
+    price: "Free",
+    link: "https://arcat.com",
+    thumbnail: "https://placehold.co/400x250/2980b9/FFF?text=ARCAT",
+    tags: ["Free", "Doors", "Windows", "Furniture", "USA", "Canada"]
+  },
+  {
+    name: "BIMsmith Market",
+    company: "BIMsmith",
+    description: "Free parametric .gsm objects from top US brands; browse/compare/download for Archicad; strong North American focus.",
+    price: "Free",
+    link: "https://market.bimsmith.com/ARCHICAD",
+    thumbnail: "https://placehold.co/400x250/27ae60/FFF?text=BIMsmith+Market",
+    tags: ["Free", "Parametric", "Brands", "USA"]
+  },
+  {
+    name: "4D Library",
+    company: "4D Library",
+    description: "Australian library of advanced .gsm objects (doors, windows, stairs); comprehensive packs for local standards.",
+    price: "Paid",
+    link: "https://4dlibrary.com.au",
+    thumbnail: "https://placehold.co/400x250/e74c3c/FFF?text=4D+Library",
+    tags: ["Paid", "Doors", "Windows", "Stairs", "Australia"]
+  },
+  {
+    name: "Central Innovation",
+    company: "Central Innovation",
+    description: "Australian/NZ reseller with paid .gsm libraries (furniture, structures, landscaping, detailing); subscription-based for local users.",
+    price: "Paid",
+    link: "https://centralinnovation.com",
+    thumbnail: "https://placehold.co/400x250/9b59b6/FFF?text=Central+Innovation",
+    tags: ["Paid", "Furniture", "Structures", "Landscaping", "Australia", "New Zealand"]
+  },
+  {
+    name: "BimBakery",
+    company: "BimBakery",
+    description: "South African developer of smart .gsm objects/workflow solutions (custom GDL for architects); focuses on informed results for local BIM.",
+    price: "Free/Paid",
+    link: "https://bimbakery.co",
+    thumbnail: "https://placehold.co/400x250/f39c12/FFF?text=BimBakery",
+    tags: ["Free", "Paid", "Smart Objects", "Workflow", "South Africa"]
+  },
+  {
+    name: "Medialogic Dubai",
+    company: "Medialogic",
+    description: "UAE-based Graphisoft distributor offering free .gsm downloads via educational licenses; Middle East focus on Archicad resources.",
+    price: "Free",
+    link: "https://medialogicdubai.com/graphisoft",
+    thumbnail: "https://placehold.co/400x250/1abc9c/FFF?text=Medialogic+Dubai",
+    tags: ["Free", "Educational", "UAE", "Middle East"]
+  },
 ];
