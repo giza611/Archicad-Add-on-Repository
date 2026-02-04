@@ -34,7 +34,7 @@ export const OBJECTS: GDLObject[] = [
     company: "ArchiUp",
     description: "Free BIM/CAD library with .gsm downloads; includes objects, textures, and details from manufacturers.",
     price: "Free",
-    link: "https://archiup.com/en",
+    link: "https://archiup.com/en/products?sortBy=default&programs%5B%5D=p2&page=1",
     thumbnail: "https://placehold.co/400x250/e74c3c/FFF?text=ArchiUp",
     tags: ["Free", "Textures", "Details", "Manufacturers", "Global"]
   },
