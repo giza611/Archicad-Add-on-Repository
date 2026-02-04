@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { ViewMode, SortOrder } from '../types';
+import { ViewMode, SortOrder, PageType } from '../types';
 
 interface HeaderProps {
   searchTerm: string;
@@ -14,6 +14,8 @@ interface HeaderProps {
   setSortOrder: (order: SortOrder) => void;
   darkMode: boolean;
   setDarkMode: (mode: boolean) => void;
+  pageType: PageType;
+  setPageType: (type: PageType) => void;
 }
 
 const Header: React.FC<HeaderProps> = ({
@@ -28,7 +30,9 @@ const Header: React.FC<HeaderProps> = ({
   sortOrder,
   setSortOrder,
   darkMode,
-  setDarkMode
+  setDarkMode,
+  pageType,
+  setPageType
 }) => {
   const [showFilters, setShowFilters] = useState(false);
   const searchRef = useRef<HTMLDivElement>(null);
@@ -62,11 +66,37 @@ const Header: React.FC<HeaderProps> = ({
             </button>
             <div>
               <h1 className="text-xl font-bold text-gray-900 dark:text-gray-100 leading-tight">
-                Archicad Add-on <span className="text-primary">Repository</span>
+                Archicad <span className="text-primary">Repository</span>
               </h1>
               <p className="text-xs text-gray-500 dark:text-gray-400 font-medium">
                 {resultCount} {resultCount === 1 ? 'result' : 'results'} found
               </p>
+            </div>
+
+            {/* Page Type Toggle */}
+            <div className="flex bg-gray-100 dark:bg-gray-700 p-1 rounded-lg ml-4">
+              <button
+                onClick={() => setPageType('addons')}
+                className={`flex items-center px-3 py-1.5 rounded-md text-sm font-medium transition-all ${
+                  pageType === 'addons'
+                    ? 'bg-white dark:bg-gray-600 text-primary shadow-sm'
+                    : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'
+                }`}
+              >
+                <i className="fas fa-plug mr-2"></i>
+                Add-Ons
+              </button>
+              <button
+                onClick={() => setPageType('objects')}
+                className={`flex items-center px-3 py-1.5 rounded-md text-sm font-medium transition-all ${
+                  pageType === 'objects'
+                    ? 'bg-white dark:bg-gray-600 text-primary shadow-sm'
+                    : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'
+                }`}
+              >
+                <i className="fas fa-cube mr-2"></i>
+                Objects
+              </button>
             </div>
           </div>
 

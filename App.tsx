@@ -3,7 +3,8 @@ import Header from './components/Header';
 import AddonCard from './components/AddonCard';
 import AddonListItem from './components/AddonListItem';
 import { ADDONS } from './constants';
-import { ViewMode, SortOrder, ClickCounts } from './types';
+import { OBJECTS } from './objectsConstants';
+import { ViewMode, SortOrder, ClickCounts, PageType } from './types';
 import { getAllClickCounts, trackClick, updateLocalCache } from './utils/clickTracker';
 
 const App: React.FC = () => {
@@ -11,6 +12,7 @@ const App: React.FC = () => {
   const [viewMode, setViewMode] = useState<ViewMode>('grid');
   const [activeTags, setActiveTags] = useState<string[]>([]);
   const [sortOrder, setSortOrder] = useState<SortOrder>('popular');
+  const [pageType, setPageType] = useState<PageType>('addons');
   const [darkMode, setDarkMode] = useState(() => {
     if (typeof window !== 'undefined') {
       const saved = localStorage.getItem('darkMode');
@@ -21,17 +23,26 @@ const App: React.FC = () => {
   const [clickCounts, setClickCounts] = useState<ClickCounts>({});
   const [isLoadingCounts, setIsLoadingCounts] = useState(true);
 
-  // Load click counts on mount
+  // Get current data source based on page type
+  const currentData = pageType === 'addons' ? ADDONS : OBJECTS;
+
+  // Load click counts on mount or when page type changes
   useEffect(() => {
     const loadClickCounts = async () => {
       setIsLoadingCounts(true);
-      const addonNames = ADDONS.map(a => a.name);
-      const counts = await getAllClickCounts(addonNames);
+      const itemNames = currentData.map(a => a.name);
+      const counts = await getAllClickCounts(itemNames);
       setClickCounts(counts);
       setIsLoadingCounts(false);
     };
     loadClickCounts();
-  }, []);
+  }, [pageType]);
+
+  // Reset filters when changing page type
+  useEffect(() => {
+    setSearchTerm('');
+    setActiveTags([]);
+  }, [pageType]);
 
   // Handle addon click
   const handleAddonClick = async (addonName: string) => {
@@ -51,16 +62,16 @@ const App: React.FC = () => {
     localStorage.setItem('darkMode', JSON.stringify(darkMode));
   }, [darkMode]);
 
-  // Extract all unique tags
+  // Extract all unique tags from current data
   const availableTags = useMemo(() => {
     const tags = new Set<string>();
-    ADDONS.forEach(addon => {
-      if (addon.tags) {
-        addon.tags.forEach(tag => tags.add(tag));
+    currentData.forEach(item => {
+      if (item.tags) {
+        item.tags.forEach(tag => tags.add(tag));
       }
     });
     return Array.from(tags).sort();
-  }, []);
+  }, [pageType]);
 
   const toggleTag = (tag: string) => {
     setActiveTags(prev => 
@@ -70,24 +81,24 @@ const App: React.FC = () => {
     );
   };
 
-  // Filter and sort addons
-  const filteredAndSortedAddons = useMemo(() => {
-    let result = ADDONS;
+  // Filter and sort items
+  const filteredAndSortedItems = useMemo(() => {
+    let result = [...currentData];
 
     // Filter by Search Term
     const query = searchTerm.toLowerCase().trim();
     if (query) {
-      result = result.filter(addon => 
-        addon.name.toLowerCase().includes(query) || 
-        addon.description.toLowerCase().includes(query) ||
-        addon.company.toLowerCase().includes(query)
+      result = result.filter(item =>
+        item.name.toLowerCase().includes(query) ||
+        item.description.toLowerCase().includes(query) ||
+        item.company.toLowerCase().includes(query)
       );
     }
 
-    // Filter by Tags (must match ALL selected tags? or ANY? Let's go with ALL for stricter filtering)
+    // Filter by Tags (must match ALL selected tags)
     if (activeTags.length > 0) {
-      result = result.filter(addon => 
-        activeTags.every(tag => addon.tags?.includes(tag))
+      result = result.filter(item =>
+        activeTags.every(tag => item.tags?.includes(tag))
       );
     }
 
@@ -108,7 +119,7 @@ const App: React.FC = () => {
     });
 
     return result;
-  }, [searchTerm, activeTags, sortOrder, clickCounts]);
+  }, [searchTerm, activeTags, sortOrder, clickCounts, pageType]);
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
@@ -117,7 +128,7 @@ const App: React.FC = () => {
         setSearchTerm={setSearchTerm}
         viewMode={viewMode}
         setViewMode={setViewMode}
-        resultCount={filteredAndSortedAddons.length}
+        resultCount={filteredAndSortedItems.length}
         availableTags={availableTags}
         activeTags={activeTags}
         toggleTag={toggleTag}
@@ -125,6 +136,8 @@ const App: React.FC = () => {
         setSortOrder={setSortOrder}
         darkMode={darkMode}
         setDarkMode={setDarkMode}
+        pageType={pageType}
+        setPageType={setPageType}
       />
 
       {/* Active Tags Display (below header) */}
@@ -151,20 +164,28 @@ const App: React.FC = () => {
       )}
 
       <main className="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        
-        {filteredAndSortedAddons.length === 0 ? (
+
+        {filteredAndSortedItems.length === 0 ? (
           <div className="text-center py-20">
             <div className="bg-gray-100 dark:bg-gray-800 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6">
-              <i className="fas fa-search text-gray-400 text-3xl"></i>
+              <i className={`fas ${pageType === 'addons' ? 'fa-plug' : 'fa-cube'} text-gray-400 text-3xl`}></i>
             </div>
-            <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100">No add-ons found</h3>
-            <p className="mt-1 text-gray-500 dark:text-gray-400">Try adjusting your search terms or filters.</p>
-            <button
-              onClick={() => { setSearchTerm(''); setActiveTags([]); }}
-              className="mt-6 text-primary font-medium hover:underline"
-            >
-              Clear search & filters
-            </button>
+            <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100">
+              No {pageType === 'addons' ? 'add-ons' : 'objects'} found
+            </h3>
+            <p className="mt-1 text-gray-500 dark:text-gray-400">
+              {currentData.length === 0
+                ? `No ${pageType === 'addons' ? 'add-ons' : 'objects'} have been added yet.`
+                : 'Try adjusting your search terms or filters.'}
+            </p>
+            {currentData.length > 0 && (
+              <button
+                onClick={() => { setSearchTerm(''); setActiveTags([]); }}
+                className="mt-6 text-primary font-medium hover:underline"
+              >
+                Clear search & filters
+              </button>
+            )}
           </div>
         ) : (
           <>
@@ -180,22 +201,22 @@ const App: React.FC = () => {
             )}
 
             <div className={
-              viewMode === 'grid' 
-                ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" 
+              viewMode === 'grid'
+                ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
                 : "flex flex-col gap-3"
             }>
-              {filteredAndSortedAddons.map((addon) => (
-                <React.Fragment key={addon.name}>
+              {filteredAndSortedItems.map((item) => (
+                <React.Fragment key={item.name}>
                   {viewMode === 'grid' ? (
                     <AddonCard
-                      addon={addon}
-                      clickCount={clickCounts[addon.name] || 0}
+                      addon={item}
+                      clickCount={clickCounts[item.name] || 0}
                       onAddonClick={handleAddonClick}
                     />
                   ) : (
                     <AddonListItem
-                      addon={addon}
-                      clickCount={clickCounts[addon.name] || 0}
+                      addon={item}
+                      clickCount={clickCounts[item.name] || 0}
                       onAddonClick={handleAddonClick}
                     />
                   )}
@@ -210,7 +231,7 @@ const App: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col sm:flex-row justify-between items-center gap-2">
           <div className="text-center sm:text-left">
             <p className="text-sm text-gray-500 dark:text-gray-400">
-              © {new Date().getFullYear()} Archicad Add-on Repository
+              © {new Date().getFullYear()} Archicad Repository
               <span className="text-xs text-gray-400 dark:text-gray-500 ml-2">by Gëzim Radoniqi</span>
             </p>
           </div>
