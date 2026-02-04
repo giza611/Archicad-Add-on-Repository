@@ -278,4 +278,105 @@ export const OBJECTS: GDLObject[] = [
     thumbnail: "https://placehold.co/400x250/1abc9c/FFF?text=Medialogic+Dubai",
     tags: ["Free", "Educational", "UAE", "Middle East"]
   },
+
+  // --- MANUFACTURER-SPECIFIC LIBRARIES ---
+  {
+    name: "Wienerberger BIM",
+    company: "Wienerberger",
+    description: "Bricks, blocks, roofing tiles, and cladding systems; full BIM libraries for walls/facades.",
+    price: "Free",
+    link: "https://wienerberger.com/bim",
+    thumbnail: "https://placehold.co/400x250/c0392b/FFF?text=Wienerberger",
+    tags: ["Free", "Bricks", "Roofing", "Cladding", "Europe"]
+  },
+  {
+    name: "Rigips / Saint-Gobain",
+    company: "Saint-Gobain",
+    description: "Drywall systems, partitions, ceilings; appears as a dedicated tab/library in Archicad.",
+    price: "Free",
+    link: "https://rigips.com",
+    thumbnail: "https://placehold.co/400x250/3498db/FFF?text=Rigips",
+    tags: ["Free", "Drywall", "Partitions", "Ceilings", "Europe"]
+  },
+  {
+    name: "CETRIS BIM",
+    company: "CETRIS",
+    description: "Cement-bonded chipboard panels for walls/floors/facades; electronic catalog inserts products.",
+    price: "Free",
+    link: "https://cetris.cz",
+    thumbnail: "https://placehold.co/400x250/7f8c8d/FFF?text=CETRIS",
+    tags: ["Free", "Panels", "Walls", "Floors", "Czech Republic"]
+  },
+  {
+    name: "Xella / Ytong BIM",
+    company: "Xella",
+    description: "Aerated concrete blocks and systems; BIM library/plugin for Archicad insertion.",
+    price: "Free",
+    link: "https://xella.com",
+    thumbnail: "https://placehold.co/400x250/f39c12/FFF?text=Xella+Ytong",
+    tags: ["Free", "Concrete", "Blocks", "Europe"]
+  },
+  {
+    name: "Britex Sanitaryware",
+    company: "Britex",
+    description: "Stainless steel sanitaryware, fixtures (sinks, dispensers, hand dryers, baby change tables); one of the largest manufacturer-owned .lcf files.",
+    price: "Free",
+    link: "https://britex.com.au/blog/post/archicad-content-library-lcf-now-available",
+    thumbnail: "https://placehold.co/400x250/95a5a6/FFF?text=Britex",
+    tags: ["Free", "Sanitaryware", "Fixtures", "Stainless Steel", "Australia"]
+  },
+  {
+    name: "James Hardie BIM",
+    company: "James Hardie",
+    description: "Fiber cement cladding/siding; includes materials and wall accessories for easy workflow.",
+    price: "Free",
+    link: "https://jameshardie.com/bim",
+    thumbnail: "https://placehold.co/400x250/2c3e50/FFF?text=James+Hardie",
+    tags: ["Free", "Cladding", "Siding", "Materials", "Global"]
+  },
+  {
+    name: "Unios Lighting",
+    company: "Unios",
+    description: "Lighting fixtures; custom GDL objects based on IES Light standard.",
+    price: "Free",
+    link: "https://unios.com/bim",
+    thumbnail: "https://placehold.co/400x250/f1c40f/FFF?text=Unios",
+    tags: ["Free", "Lighting", "Fixtures", "IES", "Australia"]
+  },
+  {
+    name: "Martela Furniture",
+    company: "Martela",
+    description: "Office furniture (chairs, tables, storage); downloadable as Archicad library pack.",
+    price: "Free",
+    link: "https://martela.com/downloads/3d-objects-and-material-libraries",
+    thumbnail: "https://placehold.co/400x250/16a085/FFF?text=Martela",
+    tags: ["Free", "Furniture", "Office", "Chairs", "Tables", "Finland"]
+  },
+  {
+    name: "Caroma BIM",
+    company: "Caroma",
+    description: "Sanitaryware (toilets, basins); Australian manufacturer with Archicad-specific downloads.",
+    price: "Free",
+    link: "https://caroma.com.au/bim",
+    thumbnail: "https://placehold.co/400x250/3498db/FFF?text=Caroma",
+    tags: ["Free", "Sanitaryware", "Toilets", "Basins", "Australia"]
+  },
+  {
+    name: "ProdLib",
+    company: "ProdLib Oy",
+    description: "Collection from multiple manufacturers (plumbing, HVAC, furniture); ProdLib app imports into Archicad.",
+    price: "Free",
+    link: "https://prodlib.com",
+    thumbnail: "https://placehold.co/400x250/9b59b6/FFF?text=ProdLib",
+    tags: ["Free", "Plumbing", "HVAC", "Furniture", "Multi-Manufacturer", "Finland"]
+  },
+  {
+    name: "Lammhults Furniture",
+    company: "Lammhults",
+    description: "Furniture (chairs, tables); Swedish manufacturer with direct GDL downloads.",
+    price: "Free",
+    link: "https://lammhults.se/en/bim",
+    thumbnail: "https://placehold.co/400x250/e74c3c/FFF?text=Lammhults",
+    tags: ["Free", "Furniture", "Chairs", "Tables", "Sweden"]
+  },
 ];
