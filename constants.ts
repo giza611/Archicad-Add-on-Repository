@@ -449,13 +449,13 @@ export const ADDONS: AddOn[] = [
     tags: ["Modeling", "Hungary"]
   },
   {
-    name: "Ci Tools: Doors + Windows",
-    company: "Ci Tools / Rendair",
-    description: "Advanced door/window modeling and scheduling.",
+    name: "Ci Tools",
+    company: "Central Innovation",
+    description: "Comprehensive productivity suite for Archicad including advanced doors/windows, stairs, roofs, scheduling tools, and workflow automation for Australian and New Zealand architects.",
     price: "Paid",
-    link: "https://rendair.ai/blog/tools-top-8-plugins-and-extensions-for-archicad",
-    thumbnail: "https://placehold.co/400x250/c0392b/FFF?text=Ci+Doors+Windows",
-    tags: ["Modeling", "Paid", "New Zealand"]
+    link: "https://centralinnovation.com/aec/productivity/ci-tools",
+    thumbnail: "https://placehold.co/400x250/3498db/FFF?text=Ci+Tools",
+    tags: ["Productivity", "Modeling", "Paid", "Australia", "New Zealand"]
   },
   {
     name: "tAPIr",
